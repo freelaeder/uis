@@ -4,6 +4,7 @@
     <router-link to="/layout">layout</router-link>
     <router-link to="/about">about</router-link>
     <router-link to="/container">container布局</router-link>
+    <router-link to="/icon">icon</router-link>
     <router-view></router-view>
   </div>
 </template>

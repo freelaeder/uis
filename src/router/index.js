@@ -25,11 +25,18 @@ const routes = [
     path:'/container',
     name:'container',
     component:() => import('@/views/container.vue')
+  },
+  {
+    path:'/icon',
+    name:'icon',
+    component:() => import('@/views/icon.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode:'history'
+  
 })
 
 export default router
