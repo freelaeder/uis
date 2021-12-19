@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu',sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #333;
+}
+.navgation {
+  position: relative;
+  width: 350px;
+  height: 70px;
+}
+.navgation ul {
+  display: flex;
+}
+.navgation ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.navgation ul li a {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+.navgation ul li a .icon {
+  position: relative;
+  line-height: 75px;
+  transition: 0.5s;
+  font-size: 30px;
+}
+.navgation ul li.active a .icon {
+  font-size: 20px;
+  transform:translateY(-6px)
+}
+.navgation ul li a .text {
+  position: absolute;
+  font-size: 12px;
+  color: #fff;
+  bottom: 20px;
+  font-weight: 400;
+  transition: 0.25s;
+  text-transform: uppercase;
+  transform: scale(0);
+}
+/* 锁定 */
+.navgation ul li.active a .text {
+  transform: scale(1);
+}
+
+.indicator {
+  position: absolute;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  transition: 0.5s;
+
+}
+.navgation ul li:nth-child(1).active ~ .indicator {
+  background: #f53b57;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 0 ));
+}
+
+.navgation ul li:nth-child(2).active ~ .indicator {
+  background: #72b31d;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 1 ));
+}
+
+.navgation ul li:nth-child(3).active ~ .indicator {
+  background: #05c46b;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 2 ));
+}
+
+.navgation ul li:nth-child(4).active ~ .indicator {
+  background: #184dad;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 3 ));
+}
+
+.navgation ul li:nth-child(5).active ~ .indicator {
+  background: #a81895;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 4 ));
+}
